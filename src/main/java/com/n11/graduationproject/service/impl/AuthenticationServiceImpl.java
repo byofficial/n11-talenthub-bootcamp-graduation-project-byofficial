@@ -2,6 +2,8 @@ package com.n11.graduationproject.service.impl;
 
 
 import com.n11.graduationproject.model.User;
+import com.n11.graduationproject.security.UserPrincipal;
+import com.n11.graduationproject.security.jwt.IJwtProvider;
 import com.n11.graduationproject.service.IAuthenticationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
