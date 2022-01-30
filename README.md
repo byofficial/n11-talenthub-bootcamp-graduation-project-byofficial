@@ -1,5 +1,5 @@
 <p align="center"> 
-  <img src="/docs/images/n11.png" alt="HAR Logo" width="80px" height="80px">
+  <img src="docs/images/n11.png" alt="HAR Logo" width="80px" height="80px">
     <img src="docs/images/patika.png" alt="HAR Logo" width="80px" height="80px">
 </p>
 
@@ -33,18 +33,10 @@
     <li><a href="#klasor-yapisi"> ➤ Klasör Yapısı</a></li>
     <li><a href="#endpoint"> ➤ Endpointler</a></li>
     <li><a href="#swagger"> ➤ Swagger Dokümantasyon Görüntüsü</a></li>
-    <li>
-      <a href="#preprocessing"> ➤ Preprocessing</a>
-      <ul>
-        <li><a href="#preprocessed-data">Pre-processed data</a></li>
-        <li><a href="#statistical-feature">Statistical feature</a></li>
-        <li><a href="#topological-feature">Topological feature</a></li>
-      </ul>
-    </li>
-    <!--<li><a href="#experiments">Experiments</a></li>-->
-    <li><a href="#results-and-discussion"> ➤ Results and Discussion</a></li>
-    <li><a href="#references"> ➤ References</a></li>
-    <li><a href="#contributors"> ➤ Contributors</a></li>
+    <li><a href="#front"> ➤ Frontend Ekran Görüntüsü</a></li>
+    <li><a href="#docker"> ➤ Docker İmajları Ekran Görüntüsü</a></li>
+    <li><a href="#gelistirme"> ➤ n11 TalentHub ve Patika Hakkında</a></li>
+    <li><a href="#iletisim"> ➤ İletişim ve Bilgiler</a></li>
   </ol>
 </details>
 
@@ -393,7 +385,7 @@ Eğer npm ile kendiniz derleyip çalıştırıyorsanız frontend adresi:
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- ROADMAP -->
-<h2 id="front"> :dart: Docker İmajları Ekran Görüntüsü</h2>
+<h2 id="docker"> :dart: Docker İmajları Ekran Görüntüsü</h2>
 
 <p align="justify"> 
 Proje yolunda docker-compose.yml dosyasını build ettiğinizde 3 imaj çalışmaktadır. Sırasyıla; mongoDb, frontend projesi ve backend projesidir.
@@ -409,22 +401,22 @@ Proje yolunda docker-compose.yml dosyasını build ettiğinizde 3 imaj çalışm
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- CONTRIBUTORS -->
-<h2 id="contributors"> :scroll: Geliştirme</h2>
+<h2 id="gelistirme"> :scroll: n11 TalentHub ve Patika Hakkında</h2>
 
 <p>
   :mortar_board: <i>Proje n11 ve Patika iş birliği ile geliştirilen 143. n11 TalentHub Java Bootcamp için hazırlanmıştır. <a href="https://www.patika.dev/bootcamp/n11-bootcampleri">Patika İlan Link</a></i> <br> <br>
 
-:woman: <b>Patika.dev</b> <br>
+:mortar_board: <b>Patika.dev</b> <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email: <a>info@patika.dev</a> <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Web: <a href="https://www.patika.dev/hakkimizda">https://www.patika.dev/hakkimizda</a> <br>
 
-:woman: <b>n11 TalentHub</b> <br>
+:mortar_board: <b>n11 TalentHub</b> <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email: <a>talenthub@n11.com</a> <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Web: <a href="https://www.n11.com/genel/talenthub-2250603">TalentHub Hakkında</a> <br>
 
 <br>
 
-<h2 id="contributors"> :scroll: İletişim ve Bilgiler</h2>
+<h2 id="iletisim"> :scroll: İletişim ve Bilgiler</h2>
 
 ✤ <a href="mailto:burak@yaztem.com">Mail</a> <br>
 ✤ <a href="https://linkedin.com/in/byofficial">LinkedIn</a> <br>
