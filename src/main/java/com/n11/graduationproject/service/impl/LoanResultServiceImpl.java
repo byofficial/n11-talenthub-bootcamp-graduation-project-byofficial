@@ -231,7 +231,7 @@ public class LoanResultServiceImpl implements ILoanResultService {
         log.info("Loan Result is calculated.");
 
         smsMessage = "Dear " + customerDto.getFullName() + ", Your loan application has been reviewed!"
-                + " Loan Result: " + loanResultDto.getStatus() + ", Credit Limit: " + loanResultDto.getCreditLimit()
+                + "Loan Result: " + loanResultDto.getStatus() + ", Credit Limit: " + loanResultDto.getCreditLimit()
                 + ", Result Date: " + LocalDateTime.now().toString();
 
         customerSMSNotification.smsSend(customerDto, smsMessage);

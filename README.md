@@ -103,7 +103,7 @@ Projeyi test ederken mutlaka 11 haneli gerçek kimlik numarası girmelisiniz. Kr
                 break;
         }
 
-        log.info("Credit score calculated! Credit Score: " + creditScore.doubleValue());
+  
         return creditScore;
     }
 
