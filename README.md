@@ -107,6 +107,11 @@ Projeyi test ederken mutlaka 11 haneli gerçek kimlik numarası girmelisiniz. Kr
         return creditScore;
     }
 
+
+Not: Geçerli ve rastgele kimlik numarası almak isterseniz fake-national-id-generate servisini çalıştırabilirsiniz.
+
+    http://localhost:8084/api/generate-id
+
 </p>
 
 
@@ -353,6 +358,16 @@ Kredi-Başvuru sınıfı ile ilgili tüm endpointler ve açıklamalar.
 | `POST`    | `/api/loan-request/new-customer`                             | Yeni müşteri bilgileri alır ve önce bu müşteriyi sisteme kaydeder. Daha sonra kredi başvurusu yapıp sonucunu geriye döner.                      |
 | `POST`   | `/api/loan-request/12341324123`                             | T.C Kimlik numarası #12341324123 olan müşteri sistemde varsa bu müşteriye ait bilgileri kullanarak kredi sonucu hesaplar.                      |
 | `GET`    | `/api/loan-request/q?nationalId=12341324123&dateOfBirth=1990-02-28` | T.C Kimlik numarası #12341324123  ve doğum tarihi #28 Şubat 1990 olan müşteri sistemde varsa kredi sonucunu getirir. Burada doğum tarihi YYYY-MM-DD standartlarında yazılmalıdır. |
+
+
+
+### Fake National Id Genarator Endpoint
+
+Geçerli rastgele kimlik numarası üretme servisi ve açıklamalar.
+
+| Method   | URL                                      | Açıklama                              |
+| -------- | ---------------------------------------- | ---------------------------------------- |
+| `GET`    | `/api/generate-id`                             | Geçerli ve rastgele kimlik numarası üretir.                      |
 
 
 
