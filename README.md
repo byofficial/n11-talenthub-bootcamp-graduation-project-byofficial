@@ -32,8 +32,10 @@
     </li>
     <li><a href="#klasor-yapisi"> ➤ Klasör Yapısı</a></li>
     <li><a href="#endpoint"> ➤ Endpointler</a></li>
+    <li><a href="#sms"> ➤ SMS Gönderimi</a></li>
     <li><a href="#swagger"> ➤ Swagger Dokümantasyon Görüntüsü</a></li>
     <li><a href="#front"> ➤ Frontend Ekran Görüntüsü</a></li>
+    <li><a href="#loglama"> ➤ Loglama Mekanizması Ekran Görüntüsü</a></li>
     <li><a href="#docker"> ➤ Docker İmajları Ekran Görüntüsü</a></li>
     <li><a href="#gelistirme"> ➤ n11 TalentHub ve Patika Hakkında</a></li>
     <li><a href="#iletisim"> ➤ İletişim ve Bilgiler</a></li>
@@ -321,6 +323,25 @@ Yukarıdaki endpoinleri swagger aracılığı ile test edebilirsiniz. `https://l
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- ROADMAP -->
+<h2 id="sms"> :dart: SMS Gönderimi</h2>
+
+<p align="justify"> 
+Projede sms gönderimi yerine log mesajı verilmiştir. Örnek SMS log mesajı
+
+
+<p align="center">
+  <img src="docs/images/12.png" alt="Table 3 and 4" width="75%" height="75%">
+</p><br/>
+
+</p>
+
+
+
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- ROADMAP -->
 <h2 id="swagger"> :dart: Swagger Dokümantasyon Ekran Görüntüsü</h2>
 
 <p align="justify"> 
@@ -385,6 +406,24 @@ Eğer npm ile kendiniz derleyip çalıştırıyorsanız frontend adresi:
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <!-- ROADMAP -->
+<h2 id="loglar"> :dart: Loglama Ekran Görüntüsü</h2>
+
+<p align="justify"> 
+Projede ayrıntılı log çalışmaları yapılmıştır.
+
+
+<p align="center">
+  <img src="docs/images/11.png" alt="Table 3 and 4" width="75%" height="75%">
+</p><br/>
+
+</p>
+
+
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- ROADMAP -->
 <h2 id="docker"> :dart: Docker İmajları Ekran Görüntüsü</h2>
 
 <p align="justify"> 
@@ -396,6 +435,7 @@ Proje yolunda docker-compose.yml dosyasını build ettiğinizde 3 imaj çalışm
 </p><br/>
 
 </p>
+
 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
