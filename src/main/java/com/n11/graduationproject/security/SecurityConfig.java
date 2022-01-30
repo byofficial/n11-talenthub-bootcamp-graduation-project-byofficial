@@ -1,8 +1,10 @@
 package com.n11.graduationproject.security;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.BeanIds;
@@ -22,9 +24,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-    @Autowired
+
     private CustomUserDetailsService customUserDetailsService;
+
+    @Autowired
+    public SecurityConfig(@Lazy CustomUserDetailsService customUserDetailsService) {
+        this.customUserDetailsService = customUserDetailsService;
+    }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -98,4 +106,3 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 }
-
