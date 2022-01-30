@@ -11,11 +11,13 @@ spring:
 
   data:
     mongodb:
-
+      port: 27017
+      host: mongo
       authentication-database: admin
-
+      username: user
+      database: dbSpringProject
+      password: pass
       auto-index-creation: true
-      uri: mongodb+srv://javamongop:WcnhMU1Uaz166@testc.k0o49.mongodb.net/dbSpringProject?retryWrites=true&w=majority
   jackson:
     serialization:
       indent_output: true

@@ -15,6 +15,7 @@ import java.util.List;
 
 @EnableAutoConfiguration
 @RestController
+@CrossOrigin
 @RequestMapping("/api/customers")
 public class CustomerController {
 

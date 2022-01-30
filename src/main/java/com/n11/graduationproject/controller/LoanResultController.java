@@ -13,6 +13,7 @@ import java.text.ParseException;
 import java.time.LocalDate;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/loan-request")
 public class LoanResultController {
 
