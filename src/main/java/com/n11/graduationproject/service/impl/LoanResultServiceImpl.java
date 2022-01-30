@@ -8,6 +8,7 @@ import com.n11.graduationproject.mapper.CustomerMapper;
 import com.n11.graduationproject.mapper.LoanResultMapper;
 import com.n11.graduationproject.model.LoanResult;
 import com.n11.graduationproject.model.enums.LoanStatus;
+import com.n11.graduationproject.notification.ICustomerSMSNotification;
 import com.n11.graduationproject.repository.ILoanResultRepository;
 import com.n11.graduationproject.service.ICreditScoreService;
 import com.n11.graduationproject.service.ICustomerService;
@@ -35,11 +36,14 @@ public class LoanResultServiceImpl implements ILoanResultService {
     private final ICreditScoreService creditScoreService;
     private final ICustomerService customerService;
 
+    private final ICustomerSMSNotification customerSMSNotification;
+
     @Autowired
-    public LoanResultServiceImpl(ILoanResultRepository loanResultRepository, ICreditScoreService creditScoreService, ICustomerService customerService) {
+    public LoanResultServiceImpl(ILoanResultRepository loanResultRepository, ICreditScoreService creditScoreService, ICustomerService customerService, ICustomerSMSNotification customerSMSNotification) {
         this.loanResultRepository = loanResultRepository;
         this.creditScoreService = creditScoreService;
         this.customerService = customerService;
+        this.customerSMSNotification = customerSMSNotification;
     }
 
 
@@ -151,6 +155,7 @@ public class LoanResultServiceImpl implements ILoanResultService {
         log.info("Loan Result is saved.");
         customerService.save(createCustomerDto);
 
+
         return loanResultDto;
     }
 
@@ -166,6 +171,7 @@ public class LoanResultServiceImpl implements ILoanResultService {
      */
     private LoanResultDto calculateLoanResult(LoanResultDto loanResultDto, CustomerDto customerDto, double creditScore, double monthlyIncome, BigDecimal guarantee) {
         log.info(CLASS_NAME_LOG + " service calculateLoanResult method is running.");
+        String smsMessage = "";
 
         if (creditScore < 500) {
             log.info("Credit Score less than 500 points.");
@@ -223,6 +229,12 @@ public class LoanResultServiceImpl implements ILoanResultService {
         LoanResultDto loanResult = save(loanResultDto);
 
         log.info("Loan Result is calculated.");
+
+        smsMessage = "Dear " + customerDto.getFullName() + ", Your loan application has been reviewed!"
+                + " Loan Result: " + loanResultDto.getStatus() + ", Credit Limit: " + loanResultDto.getCreditLimit()
+                + ", Result Date: " + LocalDateTime.now().toString();
+
+        customerSMSNotification.smsSend(customerDto, smsMessage);
         return loanResult;
     }
 }
