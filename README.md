@@ -19,6 +19,7 @@
   <summary>İçerik</summary>
   <ol>
     <li><a href="#hakkinda"> ➤ Proje Hakkında</a></li>
+    <li><a href="#onemli"> ➤ Önemli Not ve Kredi Skoru Hesapla</a></li>
     <li><a href="#teknolojiler"> ➤ Kullanılan Teknolojiler</a></li>
     <li><a href="#gereklilikler"> ➤ Gereklilikler</a></li>
      <li>
@@ -65,6 +66,49 @@ bilgileri form ile alınır ve kullanıcıya kredi sonucu ve kredi limiti göste
 kullanılabilir. Arayüz tasarımı ve deneyimi size bırakılmıştır.)
 
 </p>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- ABOUT THE PROJECT -->
+<h2 id="hakkinda"> :pencil: Önemli Not ve Kredi Skoru Hesaplama Algoritması</h2>
+
+<p align="justify"> 
+Projeyi test ederken mutlaka 11 haneli gerçek kimlik numarası girmelisiniz. Kredi skoru hesaplaması için girilen kimlik numarasının son rakamı ile kredi skoru hesaplanır. Tüm T.C Kimlik numarasındaki son basamak 0,2,4,6,8 rakamlarından oluşmaktadır. Aşağıda örnek kredi skoru hesaplama servisini görebilirsiniz.
+
+
+      public BigDecimal getCreditScore(String kimlikNumarasi) {
+       
+
+        BigDecimal krediSkoru = new BigDecimal(0L);
+        int sonBasamak = kimlikNumarasi.charAt(kimlikNumarasi.length() - 1) - '0';
+
+        switch (sonBasamak) {
+            case 0:
+                krediSkoru = BigDecimal.valueOf(1000L);
+                break;
+            case 2:
+                krediSkoru = BigDecimal.valueOf(400L);
+                break;
+            case 4:
+                krediSkoru = BigDecimal.valueOf(800L);
+                break;
+            case 6:
+                krediSkoru = BigDecimal.valueOf(650L);
+                break;
+            case 8:
+                krediSkoru = BigDecimal.valueOf(2000L);
+                break;
+            default:
+                krediSkoru = BigDecimal.valueOf(0L);
+                break;
+        }
+
+        log.info("Credit score calculated! Credit Score: " + creditScore.doubleValue());
+        return creditScore;
+    }
+
+</p>
+
 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)

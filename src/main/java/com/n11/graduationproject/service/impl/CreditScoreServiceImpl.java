@@ -50,8 +50,11 @@ public class CreditScoreServiceImpl implements ICreditScoreService {
             case 8:
                 creditScore = BigDecimal.valueOf(2000L);
                 break;
+            default:
+                creditScore = BigDecimal.valueOf(0L);
+                break;
         }
-        
+
         log.info("Credit score calculated! Credit Score: " + creditScore.doubleValue());
         return creditScore;
     }
