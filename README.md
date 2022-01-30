@@ -1,5 +1,5 @@
 <p align="center"> 
-  <img src="docs/images/n11.png" alt="HAR Logo" width="80px" height="80px">
+  <img src="/docs/images/n11.png" alt="HAR Logo" width="80px" height="80px">
     <img src="docs/images/patika.png" alt="HAR Logo" width="80px" height="80px">
 </p>
 
