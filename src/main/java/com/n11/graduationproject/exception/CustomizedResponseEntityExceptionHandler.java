@@ -3,7 +3,7 @@ package com.n11.graduationproject.exception;
 import com.n11.graduationproject.exception.customer.CustomerAlreadyExistException;
 import com.n11.graduationproject.exception.customer.CustomerNotFoundException;
 import com.n11.graduationproject.exception.loan.LoanNotFoundException;
-import com.n11.graduationproject.exception.user.UserAlreadyExistException;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -34,11 +34,6 @@ public class CustomizedResponseEntityExceptionHandler {
         return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(UserAlreadyExistException.class)
-    public ResponseEntity<ExceptionResponse> handler(UserAlreadyExistException exception) {
-        ExceptionResponse errorResponse = errorResponse(HttpStatus.NOT_FOUND, exception.getMessage());
-        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
-    }
 
     @ExceptionHandler(LoanNotFoundException.class)
     public ResponseEntity<ExceptionResponse> handler(LoanNotFoundException exception) {
